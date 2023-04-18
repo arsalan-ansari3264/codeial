@@ -1,25 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign up page</title>
-</head>
-<body>
-        <h1>sign up page is render</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>sign up page</title>
+        <style>
 
-        
-    <form action="/users/create" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
- 
-        <input type="email" name="email" placeholder="Your Email" required>
 
-        <input type="password" name="password" placeholder="Password" required>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  main{
+    background-color:  #61ade875;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  
+  }
+  form{
+    position: absolute;
+    /* top: -80px; */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 600px;
+    /* width: 100%; */
+    height: 80%;
+    margin: auto;
+    padding: 9rem 5rem;
+     border-radius: 30px;
+     box-shadow:rgba(77, 132, 226, 0.797) 0px 0px 25px 1px;
+  }
+  
+  h1{
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    font-size: 2rem;
+    position: relative;
+    top: -180px ;
+    color: rgb(45, 45, 96);
+    z-index: 999;
+  
+  
+  }
+  
+  input{
+    padding: 0.7rem;
+    outline:none;
+    border: 1px solid rgba(26, 0, 158, 0.668);  
+      border-radius: 8px;
+    position: relative;
+    top: -40px;
+  }
+  
+  #button{
+    background-color: rgb(106, 0, 255);
+    border-radius: 5px;
+    width: 13rem;
+    color: #fff;
+    align-self: center;
+    font: 400 1rem sans-serif;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    position: relative;
+    top: -30px;
+  }
+</style>
+    </head>
+    <body>
+        <h1>Register Here</h1>
 
-        <input type="password" name="confirm_password" placeholder=" Confirm Your Password" required>
-        <input type="submit" value="Sign Up">
 
-    </form>
-</body>
+        <form action="/users/create" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="password" name="password" placeholder="Password"
+                required>
+
+            <input type="password" name="confirm_password" placeholder=" Confirm Your Password" required>
+            <input id="button" type="submit" value="Sign Up">
+
+        </form>
+    </body>
 </html>

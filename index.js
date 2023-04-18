@@ -10,8 +10,10 @@ const passport = require("passport");
 const passportLocal = require("./config/passport-local-strategy");
 const { param } = require("./routes");
 const MongoStore = require('connect-mongo')(session);
+const path = require('path');
 
 app.use(express.static("./assets"));
+// app.use(express.static(path.join(path.resolve(), "public")));
 
 app.use(expresslayout);
 

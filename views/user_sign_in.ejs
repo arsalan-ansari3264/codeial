@@ -1,24 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sign in page</title>
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>sign in page</title>
+        <style>
+ 
 
-</head>
-<body>
-    <h1>sign in page is render</h1>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  main{
+    background-color: #61ade875;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  
+  }
+  form{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-height: 600px;
+    /* width: 100%; */
+    height: 80%;
+    margin: auto;
+    padding: 9rem 5rem;
+     border-radius: 30px;
+     box-shadow: rgba(77, 132, 226, 0.797) 0px 0px 25px 1px;
+     position: absolute;
+  }
+  
+  h1{
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    font-size: 2rem;
+    position: relative;
+    top: -180px;
+    color: rgb(45, 45, 96);
+    z-index: 9999;
+  
+  }
+  
+  input{
+    padding: 0.8rem;
+    outline:none;
+    border: 1px solid rgba(26, 0, 158, 0.649);
+    border-radius: 8px;
+    position: relative;
+    top: 30px;
+  }
+  
+  #button{
+    background-color: rgb(106, 0, 255);
+    border-radius: 5px;
+    width: 13rem;
+    color: #fff;
+    align-self: center;
+    font: 400 1rem sans-serif;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    position: relative;
+    top: 60px;
+  }
+</style>
+    </head>
+    <body>
+        <h1>SignIn Now</h1>
 
-    <form action="/users/create-session" method="post">
+        <form action="/users/create-session" method="post">
 
-        <input type="email" name="email" placeholder="Your Email" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="password" name="password" placeholder="Password"
+                required>
 
-        <input type="password" name="password" placeholder="Password" required>
+            <input id="button" type="submit" value="Sign in">
 
-        <input type="submit" value="Sign in">
-
-    </form>
-</body>
+        </form>
+    </body>
 </html>
